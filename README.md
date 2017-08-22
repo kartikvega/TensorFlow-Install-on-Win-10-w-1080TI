@@ -37,7 +37,7 @@ To get the VS2015 community edition installer is a bit involved. You first need 
 
 For me this was the trickiest part of the entire setup I tried to install the latest driver that NVidia has to offer for GEForce 1080 TI GPU,  and the installation went smoothly, however, when I installed CUDA/cDNN/Tensorflow, it wouldn&#39;t recognize my GPU. Tried to debug / looked at the nvidia-smi for information, ran simple GPU applications in C++ which worked fine, but Tensorflow wouldn&#39;t recognize the GPU Device. So applied the same rule of thumb I used for python, not to use the latest version and rollback to an older version ( [381.65-desktop-win10-64bit-international-whql.exe](https://www.geforce.com/drivers/results/117263)) and everything fell in place.
 
- ins pic
+ ![nVIDIA Driver](https://github.com/kartikvega/TensorflowWin10GeForce1080ti/blob/master/pics/NVidiaDriver.PNG)
 
 **Select the custom option and make sure the components are selected, click next and let it install.**
 
@@ -45,12 +45,12 @@ For me this was the trickiest part of the entire setup I tried to install the la
 
 After the driver is installed you can now install the CUDA toolkit. Be aware that CUDA toolkit will also try to install NVidia Drivers so make sure to deselect them while installing CUDA toolkit. When i start the installation I do get the error below, not sure the reason yet, but it didn&#39;t hinder anything and the install went smoothly and TF was working
 
-inspic
+![CUDA Toolkit](https://github.com/kartikvega/TensorflowWin10GeForce1080ti/blob/master/pics/cuda1.PNG)
  
 
 Under Options select custom and since we have already installed the drive, uncheck the driver components and other components and just select CUDA and install.
 
- inspic
+ ![CUDA Options](https://github.com/kartikvega/TensorflowWin10GeForce1080ti/blob/master/pics/cuda2.PNG)
 
 This should install successfully.  After installations make sure the paths below are included in the environment variables and path.
 
